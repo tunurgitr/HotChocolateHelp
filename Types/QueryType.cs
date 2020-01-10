@@ -8,13 +8,13 @@ namespace Posts.API.Types
     {
         protected override void Configure(IObjectTypeDescriptor<PostsQuery> descriptor)
         {
-            descriptor.Field(p => p.GetPosts())
+            descriptor.Field(p => p.GetPosts(default))
                 .Name("posts");
 
-            descriptor.Field(p => p.GetUserPosts(default(Guid)))
+            descriptor.Field(p => p.GetUserPosts(default, default(Guid)))
                 .Name("user_posts");
 
-            descriptor.Field(p => p.GetPostById(default(Guid)))
+            descriptor.Field(p => p.GetPostById(default, default(Guid)))
                 .Name("get_post_by_id");
         }
     }
