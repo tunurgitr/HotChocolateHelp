@@ -20,7 +20,7 @@ namespace Posts.API.Types
                 .Type<StringType>();
 
             descriptor.Field(p => p.Status)
-                .Type<StringType>();
+                .Type<BooleanType>();
         }
     }
 }
